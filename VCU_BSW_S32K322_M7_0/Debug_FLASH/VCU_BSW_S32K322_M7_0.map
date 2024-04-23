@@ -2801,6 +2801,12 @@ Discarded input sections
  .debug_macro   0x00000000       0x57 ./generate/src/OsIf_Cfg.o
  .debug_macro   0x00000000       0x34 ./generate/src/OsIf_Cfg.o
  .debug_macro   0x00000000       0x70 ./generate/src/OsIf_Cfg.o
+ .group         0x00000000        0xc ./src/EAL/EAL_DIO/eal_dio.o
+ .debug_macro   0x00000000      0xaa8 ./src/EAL/EAL_DIO/eal_dio.o
+ .group         0x00000000        0xc ./src/HAL/HAL_DIO/dio_hal.o
+ .debug_macro   0x00000000      0xaa8 ./src/HAL/HAL_DIO/dio_hal.o
+ .group         0x00000000        0xc ./src/RTE/rte.o
+ .debug_macro   0x00000000      0xaa8 ./src/RTE/rte.o
  .group         0x00000000        0xc ./src/main.o
  .group         0x00000000        0xc ./src/main.o
  .group         0x00000000        0xc ./src/main.o
@@ -2905,6 +2911,9 @@ LOAD ./board/Tspc_Port_Ip_Cfg.o
 LOAD ./generate/src/Clock_Ip_Cfg.o
 LOAD ./generate/src/Igf_Port_Ip_Cfg.o
 LOAD ./generate/src/OsIf_Cfg.o
+LOAD ./src/EAL/EAL_DIO/eal_dio.o
+LOAD ./src/HAL/HAL_DIO/dio_hal.o
+LOAD ./src/RTE/rte.o
 LOAD ./src/main.o
 LOAD c:/nxp/s32ds.3.5/s32ds/build_tools/gcc_v10.2/gcc-10.2-arm32-eabi/bin/../lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a
 LOAD c:/nxp/s32ds.3.5/s32ds/build_tools/gcc_v10.2/gcc-10.2-arm32-eabi/bin/../lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
@@ -2991,6 +3000,9 @@ END GROUP
  .text          0x00400e2c        0x0 ./generate/src/Clock_Ip_Cfg.o
  .text          0x00400e2c        0x0 ./generate/src/Igf_Port_Ip_Cfg.o
  .text          0x00400e2c        0x0 ./generate/src/OsIf_Cfg.o
+ .text          0x00400e2c        0x0 ./src/EAL/EAL_DIO/eal_dio.o
+ .text          0x00400e2c        0x0 ./src/HAL/HAL_DIO/dio_hal.o
+ .text          0x00400e2c        0x0 ./src/RTE/rte.o
  .text          0x00400e2c        0x0 ./src/main.o
  .text          0x00400e2c        0x0 c:/nxp/s32ds.3.5/s32ds/build_tools/gcc_v10.2/gcc-10.2-arm32-eabi/bin/../lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memmove.o)
  .text          0x00400e2c        0x0 c:/nxp/s32ds.3.5/s32ds/build_tools/gcc_v10.2/gcc-10.2-arm32-eabi/bin/../lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
@@ -3302,6 +3314,9 @@ END GROUP
  .data          0x20400094        0x0 ./generate/src/Clock_Ip_Cfg.o
  .data          0x20400094        0x0 ./generate/src/Igf_Port_Ip_Cfg.o
  .data          0x20400094        0x0 ./generate/src/OsIf_Cfg.o
+ .data          0x20400094        0x0 ./src/EAL/EAL_DIO/eal_dio.o
+ .data          0x20400094        0x0 ./src/HAL/HAL_DIO/dio_hal.o
+ .data          0x20400094        0x0 ./src/RTE/rte.o
  .data          0x20400094        0x0 ./src/main.o
  .data          0x20400094        0x0 c:/nxp/s32ds.3.5/s32ds/build_tools/gcc_v10.2/gcc-10.2-arm32-eabi/bin/../lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memmove.o)
  .data          0x20400094        0x0 c:/nxp/s32ds.3.5/s32ds/build_tools/gcc_v10.2/gcc-10.2-arm32-eabi/bin/../lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
@@ -3352,6 +3367,9 @@ END GROUP
  .bss           0x20400118        0x0 ./generate/src/Clock_Ip_Cfg.o
  .bss           0x20400118        0x0 ./generate/src/Igf_Port_Ip_Cfg.o
  .bss           0x20400118        0x0 ./generate/src/OsIf_Cfg.o
+ .bss           0x20400118        0x0 ./src/EAL/EAL_DIO/eal_dio.o
+ .bss           0x20400118        0x0 ./src/HAL/HAL_DIO/dio_hal.o
+ .bss           0x20400118        0x0 ./src/RTE/rte.o
  .bss           0x20400118        0x4 ./src/main.o
                 0x20400118                exit_code
  .bss           0x2040011c        0x0 c:/nxp/s32ds.3.5/s32ds/build_tools/gcc_v10.2/gcc-10.2-arm32-eabi/bin/../lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memmove.o)
@@ -3604,11 +3622,17 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000067a       0x39 ./generate/src/OsIf_Cfg.o
  .ARM.attributes
-                0x000006b3       0x34 ./src/main.o
+                0x000006b3       0x39 ./src/EAL/EAL_DIO/eal_dio.o
  .ARM.attributes
-                0x000006e7       0x34 c:/nxp/s32ds.3.5/s32ds/build_tools/gcc_v10.2/gcc-10.2-arm32-eabi/bin/../lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memmove.o)
+                0x000006ec       0x39 ./src/HAL/HAL_DIO/dio_hal.o
  .ARM.attributes
-                0x0000071b       0x34 c:/nxp/s32ds.3.5/s32ds/build_tools/gcc_v10.2/gcc-10.2-arm32-eabi/bin/../lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+                0x00000725       0x39 ./src/RTE/rte.o
+ .ARM.attributes
+                0x0000075e       0x34 ./src/main.o
+ .ARM.attributes
+                0x00000792       0x34 c:/nxp/s32ds.3.5/s32ds/build_tools/gcc_v10.2/gcc-10.2-arm32-eabi/bin/../lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memmove.o)
+ .ARM.attributes
+                0x000007c6       0x34 c:/nxp/s32ds.3.5/s32ds/build_tools/gcc_v10.2/gcc-10.2-arm32-eabi/bin/../lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
 
 .comment        0x00000000       0x88
  .comment       0x00000000       0x88 ./Project_Settings/Startup_Code/exceptions.o
@@ -3643,11 +3667,14 @@ LOAD linker stubs
  .comment       0x00000088       0x89 ./generate/src/Clock_Ip_Cfg.o
  .comment       0x00000088       0x89 ./generate/src/Igf_Port_Ip_Cfg.o
  .comment       0x00000088       0x89 ./generate/src/OsIf_Cfg.o
+ .comment       0x00000088       0x89 ./src/EAL/EAL_DIO/eal_dio.o
+ .comment       0x00000088       0x89 ./src/HAL/HAL_DIO/dio_hal.o
+ .comment       0x00000088       0x89 ./src/RTE/rte.o
  .comment       0x00000088       0x89 ./src/main.o
  .comment       0x00000088       0x89 c:/nxp/s32ds.3.5/s32ds/build_tools/gcc_v10.2/gcc-10.2-arm32-eabi/bin/../lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memmove.o)
  .comment       0x00000088       0x89 c:/nxp/s32ds.3.5/s32ds/build_tools/gcc_v10.2/gcc-10.2-arm32-eabi/bin/../lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
 
-.debug_info     0x00000000    0x13a93
+.debug_info     0x00000000    0x13af6
  .debug_info    0x00000000      0x139 ./Project_Settings/Startup_Code/exceptions.o
  .debug_info    0x00000139      0x76a ./Project_Settings/Startup_Code/nvic.o
  .debug_info    0x000008a3      0x36f ./Project_Settings/Startup_Code/startup.o
@@ -3680,9 +3707,12 @@ LOAD linker stubs
  .debug_info    0x00012b21      0xda2 ./generate/src/Clock_Ip_Cfg.o
  .debug_info    0x000138c3       0x7d ./generate/src/Igf_Port_Ip_Cfg.o
  .debug_info    0x00013940       0x7d ./generate/src/OsIf_Cfg.o
- .debug_info    0x000139bd       0xd6 ./src/main.o
+ .debug_info    0x000139bd       0x21 ./src/EAL/EAL_DIO/eal_dio.o
+ .debug_info    0x000139de       0x21 ./src/HAL/HAL_DIO/dio_hal.o
+ .debug_info    0x000139ff       0x21 ./src/RTE/rte.o
+ .debug_info    0x00013a20       0xd6 ./src/main.o
 
-.debug_abbrev   0x00000000     0x2e0e
+.debug_abbrev   0x00000000     0x2e47
  .debug_abbrev  0x00000000       0x47 ./Project_Settings/Startup_Code/exceptions.o
  .debug_abbrev  0x00000047      0x102 ./Project_Settings/Startup_Code/nvic.o
  .debug_abbrev  0x00000149      0x119 ./Project_Settings/Startup_Code/startup.o
@@ -3715,9 +3745,12 @@ LOAD linker stubs
  .debug_abbrev  0x00002c47      0x103 ./generate/src/Clock_Ip_Cfg.o
  .debug_abbrev  0x00002d4a       0x29 ./generate/src/Igf_Port_Ip_Cfg.o
  .debug_abbrev  0x00002d73       0x29 ./generate/src/OsIf_Cfg.o
- .debug_abbrev  0x00002d9c       0x72 ./src/main.o
+ .debug_abbrev  0x00002d9c       0x13 ./src/EAL/EAL_DIO/eal_dio.o
+ .debug_abbrev  0x00002daf       0x13 ./src/HAL/HAL_DIO/dio_hal.o
+ .debug_abbrev  0x00002dc2       0x13 ./src/RTE/rte.o
+ .debug_abbrev  0x00002dd5       0x72 ./src/main.o
 
-.debug_aranges  0x00000000      0x908
+.debug_aranges  0x00000000      0x950
  .debug_aranges
                 0x00000000       0x68 ./Project_Settings/Startup_Code/exceptions.o
  .debug_aranges
@@ -3783,7 +3816,13 @@ LOAD linker stubs
  .debug_aranges
                 0x000008d0       0x18 ./generate/src/OsIf_Cfg.o
  .debug_aranges
-                0x000008e8       0x20 ./src/main.o
+                0x000008e8       0x18 ./src/EAL/EAL_DIO/eal_dio.o
+ .debug_aranges
+                0x00000900       0x18 ./src/HAL/HAL_DIO/dio_hal.o
+ .debug_aranges
+                0x00000918       0x18 ./src/RTE/rte.o
+ .debug_aranges
+                0x00000930       0x20 ./src/main.o
 
 .debug_ranges   0x00000000      0x840
  .debug_ranges  0x00000000       0x58 ./Project_Settings/Startup_Code/exceptions.o
@@ -3812,7 +3851,7 @@ LOAD linker stubs
  .debug_ranges  0x000007e8       0x48 ./RTD/src/Tspc_Port_Ip.o
  .debug_ranges  0x00000830       0x10 ./src/main.o
 
-.debug_macro    0x00000000    0x4ee8f
+.debug_macro    0x00000000    0x4eec2
  .debug_macro   0x00000000      0x164 ./Project_Settings/Startup_Code/exceptions.o
  .debug_macro   0x00000164      0xaa8 ./Project_Settings/Startup_Code/exceptions.o
  .debug_macro   0x00000c0c       0x22 ./Project_Settings/Startup_Code/exceptions.o
@@ -4008,9 +4047,12 @@ LOAD linker stubs
  .debug_macro   0x0004e986      0x1e9 ./generate/src/Igf_Port_Ip_Cfg.o
  .debug_macro   0x0004eb6f      0x182 ./generate/src/OsIf_Cfg.o
  .debug_macro   0x0004ecf1       0x5e ./generate/src/OsIf_Cfg.o
- .debug_macro   0x0004ed4f      0x140 ./src/main.o
+ .debug_macro   0x0004ed4f       0x11 ./src/EAL/EAL_DIO/eal_dio.o
+ .debug_macro   0x0004ed60       0x11 ./src/HAL/HAL_DIO/dio_hal.o
+ .debug_macro   0x0004ed71       0x11 ./src/RTE/rte.o
+ .debug_macro   0x0004ed82      0x140 ./src/main.o
 
-.debug_line     0x00000000    0x10166
+.debug_line     0x00000000    0x10211
  .debug_line    0x00000000      0x5a9 ./Project_Settings/Startup_Code/exceptions.o
  .debug_line    0x000005a9      0x95e ./Project_Settings/Startup_Code/nvic.o
  .debug_line    0x00000f07      0x5b6 ./Project_Settings/Startup_Code/startup.o
@@ -4043,9 +4085,12 @@ LOAD linker stubs
  .debug_line    0x0000ec95      0x62f ./generate/src/Clock_Ip_Cfg.o
  .debug_line    0x0000f2c4      0x596 ./generate/src/Igf_Port_Ip_Cfg.o
  .debug_line    0x0000f85a      0x4aa ./generate/src/OsIf_Cfg.o
- .debug_line    0x0000fd04      0x462 ./src/main.o
+ .debug_line    0x0000fd04       0x3d ./src/EAL/EAL_DIO/eal_dio.o
+ .debug_line    0x0000fd41       0x3d ./src/HAL/HAL_DIO/dio_hal.o
+ .debug_line    0x0000fd7e       0x31 ./src/RTE/rte.o
+ .debug_line    0x0000fdaf      0x462 ./src/main.o
 
-.debug_str      0x00000000   0x1fecf2
+.debug_str      0x00000000   0x1fed3d
  .debug_str     0x00000000     0x80ae ./Project_Settings/Startup_Code/exceptions.o
                                0x82b9 (size before relaxing)
  .debug_str     0x000080ae   0x1e66ad ./Project_Settings/Startup_Code/nvic.o
@@ -4110,7 +4155,13 @@ LOAD linker stubs
                               0x4e2d0 (size before relaxing)
  .debug_str     0x001febd3      0x102 ./generate/src/OsIf_Cfg.o
                                0x843d (size before relaxing)
- .debug_str     0x001fecd5       0x1d ./src/main.o
+ .debug_str     0x001fecd5       0x1d ./src/EAL/EAL_DIO/eal_dio.o
+                               0x2e3f (size before relaxing)
+ .debug_str     0x001fecf2       0x1d ./src/HAL/HAL_DIO/dio_hal.o
+                               0x2e3f (size before relaxing)
+ .debug_str     0x001fed0f       0x11 ./src/RTE/rte.o
+                               0x2e33 (size before relaxing)
+ .debug_str     0x001fed20       0x1d ./src/main.o
                                0x8031 (size before relaxing)
 
 .debug_frame    0x00000000     0x12a0
