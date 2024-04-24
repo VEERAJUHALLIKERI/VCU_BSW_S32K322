@@ -1,5 +1,5 @@
 /*==================================================================================================
-*   Project              : RTD AUTOSAR R21-11
+*   Project              : RTD AUTOSAR 4.7
 *   Platform             : CORTEXM
 *   Peripheral           : S32K3XX
 *   Dependencies         : none

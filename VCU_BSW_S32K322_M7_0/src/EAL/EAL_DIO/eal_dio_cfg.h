@@ -10,114 +10,115 @@
 
 
 #include "stdint.h"
+#include "Siul2_Dio_Ip_Cfg.h"
 
 /* Input GPIO pins */
-#define PORT_IN_SENSE_CCP				PTE
+#define PORT_IN_SENSE_CCP				PTE_H_HALF
 #define PIN_IN_SENSE_CCP				16
 
-#define PORT_IN_SENSE_CPP				PTD
-#define PIN_IN_SENSE_CPP				01
+#define PORT_IN_SENSE_CPP				PTD_L_HALF
+#define PIN_IN_SENSE_CPP				1
 
-#define PORT_IN_SENSE_VDC				PTD
+#define PORT_IN_SENSE_VDC				PTD_L_HALF
 #define PIN_IN_SENSE_VDC				0
 
-#define PORT_IN_INT1_IMU				PTD
+#define PORT_IN_INT1_IMU				PTD_L_HALF
 #define PIN_IN_INT1_IMU					15
 
-#define PORT_IN_INT2_IMU				PTE
-#define PIN_IN_INT2_IMU					09
+#define PORT_IN_INT2_IMU				PTE_L_HALF
+#define PIN_IN_INT2_IMU					9
 
-#define PORT_IN_SOM_CTS					PTC
-#define PIN_IN_SOM_CTS					08
+#define PORT_IN_SOM_CTS					PTC_L_HALF
+#define PIN_IN_SOM_CTS					8
 
 
 
 /* Output GPIO pins */
-#define PORT_OUT_CAN_STB				PTE
+#define PORT_OUT_CAN_STB				PTE_L_HALF
 #define PIN_OUT_CAN_STB					11
 
-#define PORT_OUT_EN_HSI					PTE
-#define PIN_OUT_EN_HSI					03
+#define PORT_OUT_EN_HSI					PTE_L_HALF
+#define PIN_OUT_EN_HSI					3
 
-#define PORT_OUT_BOOT_BLE				PTE
+#define PORT_OUT_BOOT_BLE				PTE_L_HALF
 #define PIN_OUT_BOOT_BLE				12
 
-#define PORT_OUT_RST_BLE				PTD
+#define PORT_OUT_RST_BLE				PTD_H_HALF
 #define PIN_OUT_RST_BLE					17
 
-#define PORT_OUT_PWR_AMPL				PTD
+#define PORT_OUT_PWR_AMPL				PTD_H_HALF
 #define PIN_OUT_PWR_AMPL				16
 
-#define PORT_OUT_PWRKEY_SOM				PTE
-#define PIN_OUT_PWRKEY_SOM				08
+#define PORT_OUT_PWRKEY_SOM				PTE_L_HALF
+#define PIN_OUT_PWRKEY_SOM				8
 
-#define PORT_OUT_DE_CONN				PTB
-#define PIN_OUT_DE_CONN					05
+#define PORT_OUT_DE_CONN				PTB_L_HALF
+#define PIN_OUT_DE_CONN					5
 
-#define PORT_OUT_WP_EEPROM				PTB
-#define PIN_OUT_WP_EEPROM				04
+#define PORT_OUT_WP_EEPROM				PTB_L_HALF
+#define PIN_OUT_WP_EEPROM				4
 
-#define PORT_OUT_CS0_HS1				PTD
-#define PIN_OUT_CS0_HS1					07
+#define PORT_OUT_CS0_HS1				PTD_L_HALF
+#define PIN_OUT_CS0_HS1					7
 
-#define PORT_OUT_CS1_HS1				PTD
-#define PIN_OUT_CS1_HS1					06
+#define PORT_OUT_CS1_HS1				PTD_L_HALF
+#define PIN_OUT_CS1_HS1					6
 
-#define PORT_OUT_CS0_HS2				PTD
-#define PIN_OUT_CS0_HS2					05
+#define PORT_OUT_CS0_HS2				PTD_L_HALF
+#define PIN_OUT_CS0_HS2					5
 
-#define PORT_OUT_CS1_HS2				PTD
+#define PORT_OUT_CS1_HS2				PTD_L_HALF
 #define PIN_OUT_CS1_HS2					12
 
-#define PORT_OUT_CS0_HS3				PTD
+#define PORT_OUT_CS0_HS3				PTD_L_HALF
 #define PIN_OUT_CS0_HS3					11
 
-#define PORT_OUT_CS1_HS3				PTD
+#define PORT_OUT_CS1_HS3				PTD_L_HALF
 #define PIN_OUT_CS1_HS3					10
 
-#define PORT_OUT_SPLY_THR				PTC
-#define PIN_OUT_SPLY_THR				01
+#define PORT_OUT_SPLY_THR				PTC_L_HALF
+#define PIN_OUT_SPLY_THR				1
 
-#define PORT_OUT_HH_HS3					PTC
+#define PORT_OUT_HH_HS3					PTC_H_HALF
 #define PIN_OUT_HH_HS3					17
 
-#define PORT_OUT_HL_HS1					PTC
+#define PORT_OUT_HL_HS1					PTC_H_HALF
 #define PIN_OUT_HL_HS1					16
 
-#define PORT_OUT_LI_HS1					PTC
+#define PORT_OUT_LI_HS1					PTC_L_HALF
 #define PIN_OUT_LI_HS1					15
 
-#define PORT_OUT_RI_HS2					PTC
+#define PORT_OUT_RI_HS2					PTC_L_HALF
 #define PIN_OUT_RI_HS2					14
 
-#define PORT_OUT_HR_HS3					PTB
-#define PIN_OUT_HR_HS3					03
+#define PORT_OUT_HR_HS3					PTB_L_HALF
+#define PIN_OUT_HR_HS3					3
 
-#define PORT_OUT_MCUS_HS1				PTB
-#define PIN_OUT_MCUS_HS1				02
+#define PORT_OUT_MCUS_HS1				PTB_L_HALF
+#define PIN_OUT_MCUS_HS1				2
 
-#define PORT_OUT_ESCL1_HS2				PTC
+#define PORT_OUT_ESCL1_HS2				PTC_L_HALF
 #define PIN_OUT_ESCL1_HS2				13
 
-#define PORT_OUT_BL_HS2					PTC
+#define PORT_OUT_BL_HS2					PTC_L_HALF
 #define PIN_OUT_BL_HS2					12
 
-#define PORT_OUT_RTS_SOM				PTC
-#define PIN_OUT_RTS_SOM					09
+#define PORT_OUT_RTS_SOM				PTC_L_HALF
+#define PIN_OUT_RTS_SOM					9
 
-#define PORT_OUT_CS_DSI					PTB
+#define PORT_OUT_CS_DSI					PTB_H_HALF
 #define PIN_OUT_CS_DSI					17
 
-#define PORT_OUT_EX12_HS1				PTB
+#define PORT_OUT_EX12_HS1				PTB_L_HALF
 #define PIN_OUT_EX12_HS1				12
 
-#define PORT_OUT_FRST_HS2				PTB
+#define PORT_OUT_FRST_HS2				PTB_L_HALF
 #define PIN_OUT_FRST_HS2				10
 
-#define PORT_OUT_FRST_HS1				PTB
+#define PORT_OUT_FRST_HS1				PTB_L_HALF
 #define PIN_OUT_FRST_HS1				11
 
-#define PORT_OUT_ESCL2_HS2				PTC
+#define PORT_OUT_ESCL2_HS2				PTC_L_HALF
 #define PIN_OUT_ESCL2_HS2				0
 
 

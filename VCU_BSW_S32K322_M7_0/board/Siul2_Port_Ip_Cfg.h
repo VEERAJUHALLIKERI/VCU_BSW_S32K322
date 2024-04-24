@@ -8,7 +8,7 @@
 *   Autosar Revision     : ASR_REL_4_7_REV_0000
 *   Autosar Conf.Variant :
 *   SW Version           : 3.0.0
-*   Build Version        : S32K3_RTD_3_0_0_D2303_ASR_REL_4_7_REV_0000_20230331
+*   Build Version        : S32K3_AUTOSAR_4_4_-_R21-11_RTD_3_0_0_D2303_ASR_REL_4_7_REV_0000_20230331
 *
 *   Copyright 2020 - 2023 NXP Semiconductors
 *
@@ -97,7 +97,17 @@ extern "C"{
 
 /*! @brief Definitions for BOARD_InitPins Functional Group */
 
-/*! @brief No pin was configured for this group or no need any configuration */
+/*! @brief User number of configured pins */
+#define NUM_OF_CONFIGURED_PINS0 1
+
+#define PORT_START_SEC_CONFIG_DATA_UNSPECIFIED
+#include "Port_MemMap.h"
+
+/*! @brief User configuration structure */
+extern const Siul2_Port_Ip_PinSettingsConfig g_pin_mux_InitConfigArr0[NUM_OF_CONFIGURED_PINS0];
+
+#define PORT_STOP_SEC_CONFIG_DATA_UNSPECIFIED
+#include "Port_MemMap.h"
 
 /*==================================================================================================
                                            ENUMS
