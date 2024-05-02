@@ -7,11 +7,12 @@
 
 #include "hal_can.h"
 #include "FlexCAN_Ip.h"
+#include "FlexCAN_Ip_Sa_BOARD_InitPeripherals_PBcfg.h"
 
 void HAL_CAN_Init(void)
 {
 	/* can initialization */
-	//FlexCAN_Ip_Init(INST_FLEXCAN_0, &FlexCAN_State0, &FlexCAN_Config0);
+	FlexCAN_Ip_Init(INST_BOARD_INITPERIPHERALS_FLEXCAN_0, &FlexCAN_BOARD_InitPeripherals_State0, &FlexCAN_Config0_BOARD_InitPeripherals);
 }
 
 void HAL_CAN_SendData(uint8_t instance, uint8_t MailBox,uint32_t MessageId, uint8_t* payload)
