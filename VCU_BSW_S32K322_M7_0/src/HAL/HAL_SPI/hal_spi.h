@@ -11,7 +11,7 @@
 #define SPI_TXRX_TIMEOUT	50
 
 
-void hal_spi_init(void);
+void hal_spi_init(Lpspi_Ip_ConfigType * SPIConfigType, Lpspi_Ip_ExternalDeviceType * ExtDeviceType);
 void hal_spi_TxRxTransferData(Lpspi_Ip_ExternalDeviceType *External_Driver, uint8_t *TxBuf, uint8_t *RxBuf, uint16_t PayloadSize);
 
 

@@ -11,7 +11,7 @@
 #include"Siul2_Dio_Ip.h"
 #include"Siul2_Port_Ip.h"
 
-void HAL_DIO_PinInit(void);
+void HAL_DIO_PinInit(uint32_t PinCounts, Siul2_Port_Ip_PinSettingsConfig * PinSettingsConfig);
 Siul2_Dio_Ip_PinsLevelType HAL_DIO_GetPinStatus(Siul2_Dio_Ip_GpioType *GpioBase, Siul2_Dio_Ip_PinsChannelType PinNumber);
 void HAL_DIO_UpdatePinStatus(Siul2_Dio_Ip_GpioType *GpioBase, Siul2_Dio_Ip_PinsChannelType PinNumber,Siul2_Dio_Ip_PinsLevelType value);
 
