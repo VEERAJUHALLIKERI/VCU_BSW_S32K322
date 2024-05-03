@@ -395,6 +395,16 @@
                   <data type="Version">0.1.0</data>
                </feature>
             </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.driver.IntCtrl_Ip" description="IntCtrl_Ip is not found in the toolchain/IDE project. The project will not compile!" problem_level="2" source="Peripherals">
+               <feature name="enabled" evaluation="equal">
+                  <data type="Boolean">true</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.driver.IntCtrl_Ip" description="An unsupported version of the IntCtrl_Ip in the toolchain/IDE project. Required: ${required_value}, actual: ${actual_value}. The project might not compile correctly." problem_level="1" source="Peripherals">
+               <feature name="version" evaluation="equivalent">
+                  <data type="Version">1.0.0</data>
+               </feature>
+            </dependency>
             <dependency resourceType="Tool" resourceId="Clocks" description="The Clocks tool is required by the Peripherals tool, but it is disabled." problem_level="2" source="Peripherals">
                <feature name="enabled" evaluation="equal">
                   <data>true</data>
@@ -408,6 +418,8 @@
             <file path="generate/include/FlexCAN_Ip_Cfg.h" update_enabled="true"/>
             <file path="generate/include/FlexCAN_Ip_CfgDefines.h" update_enabled="true"/>
             <file path="generate/include/FlexCAN_Ip_Sa_BOARD_InitPeripherals_PBcfg.h" update_enabled="true"/>
+            <file path="generate/include/IntCtrl_Ip_Cfg.h" update_enabled="true"/>
+            <file path="generate/include/IntCtrl_Ip_CfgDefines.h" update_enabled="true"/>
             <file path="generate/include/Lpspi_Ip_Cfg.h" update_enabled="true"/>
             <file path="generate/include/Lpspi_Ip_Sa_BOARD_InitPeripherals_PBcfg.h" update_enabled="true"/>
             <file path="generate/include/Lpuart_Uart_Ip_Cfg.h" update_enabled="true"/>
@@ -420,6 +432,7 @@
             <file path="generate/include/modules.h" update_enabled="true"/>
             <file path="generate/src/Adc_Sar_Ip_BOARD_InitPeripherals_PBcfg.c" update_enabled="true"/>
             <file path="generate/src/FlexCAN_Ip_Sa_BOARD_InitPeripherals_PBcfg.c" update_enabled="true"/>
+            <file path="generate/src/IntCtrl_Ip_Cfg.c" update_enabled="true"/>
             <file path="generate/src/Lpspi_Ip_Sa_BOARD_InitPeripherals_PBcfg.c" update_enabled="true"/>
             <file path="generate/src/Lpuart_Uart_Ip_Sa_BOARD_InitPeripherals_PBcfg.c" update_enabled="true"/>
             <file path="generate/src/OsIf_Cfg.c" update_enabled="true"/>
@@ -767,6 +780,21 @@
                            <setting name="timeout_type" value="OSIF_COUNTER_DUMMY"/>
                            <setting name="timeout_value" value="10000"/>
                         </struct>
+                     </config_set>
+                  </instance>
+                  <instance name="IntCtrl_Ip" uuid="0dfad65a-d72d-4e6b-931b-67d371988f4e" type="IntCtrl_Ip" type_id="IntCtrl_Ip" mode="ip" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="IntCtrl_Ip">
+                        <setting name="Name" value="IntCtrl_Ip"/>
+                        <struct name="ConfigTimeSupport">
+                           <setting name="POST_BUILD_VARIANT_USED" value="false"/>
+                           <setting name="IMPLEMENTATION_CONFIG_VARIANT" value="VARIANT-PRE-COMPILE"/>
+                        </struct>
+                        <struct name="IntCtrlConfigGeneral">
+                           <setting name="Name" value="IntCtrlConfigGeneral"/>
+                           <setting name="IntCtrlDevErrorDetect" value="true"/>
+                           <setting name="PlatformEnableUserModeSupport" value="false"/>
+                        </struct>
+                        <array name="IntCtrlConfig"/>
                      </config_set>
                   </instance>
                </instances>
